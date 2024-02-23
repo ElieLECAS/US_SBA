@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="{% static "style.css" %} %}">
+        <link rel="stylesheet" href="{% static 'style.css' %}" />
         <title>Accueil</title>
     </head>
 
@@ -12,6 +12,23 @@
         <header>
             <nav>SBA</nav>
         </header>
-        
+
+        <figure class="portrait">
+            <img
+                src="{% static 'images/portrait-young-woman-digital-nomad-standing-office-with-laptop-smiling-working-her_1258-195345.jpg' %}"
+                alt=""
+            />
+            <figcaption>
+                <p>Need funding for your small business?</p>
+                <a href="">Learn about SBA loans</a>
+            </figcaption>
+        </figure>
+
+        <div class="grid-container">
+            <div class="case">Case 1</div>
+            <div class="case">Case 2</div>
+            <div class="case">Case 3</div>
+        </div>
+
     </body>
 </html>

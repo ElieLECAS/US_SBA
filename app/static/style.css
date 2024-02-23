@@ -1,3 +1,81 @@
-nav {
-    background-color: aqua;
+* {
+    margin: 0;
+    padding: 0;
 }
+
+body {
+    max-width: 2000px;
+    margin: auto;
+}
+
+nav {
+    background-color: #162e51;
+    height: 15vh;
+}
+
+.portrait {
+    position: relative;
+}
+.portrait img {
+    width: 100vw;
+    height: 40vh;
+    object-fit: cover;
+    max-width: 2000px;
+    position: relative;
+    overflow: hidden;
+}
+
+.portrait figcaption {
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    background-color: #162e51;
+    width: 350px;
+    height: 300px;
+    border-radius: 7px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    transform: translate(50%, -50%);
+}
+
+.portrait figcaption p {
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    width: 65%;
+    margin-x: auto;
+}
+
+.portrait figcaption a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid white 2px;
+    padding: 3%;
+    width: 60%;
+    font-weight: 800;
+    text-align: center;
+}
+
+.portrait figcaption a:hover {
+    background-color: white;
+    color: #162e51;
+    transition: 0.2s;
+}
+
+.grid-container {
+    margin-x: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales */
+    gap: 10px; /* Espace entre les cases */
+}
+
+.case {
+    background-color: #ddd; /* Couleur de fond pour visualisation */
+    padding: 20px; /* Espacement intérieur */
+    text-align: center; /* Centrer le texte */
+    margin-x: 5px;
+}
+

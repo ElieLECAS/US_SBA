@@ -94,6 +94,7 @@ nav {
     width: 60%;
     font-weight: 800;
     text-align: center;
+    border: solid 2px #162e51;
 }
 
 .case a:hover {
@@ -138,7 +139,7 @@ nav {
     border: solid white 2px;
     background-color: #162e51;
     color: white;
-    transition: .2s;
+    transition: 0.2s;
 }
 
 .bandeau figcaption a:hover {

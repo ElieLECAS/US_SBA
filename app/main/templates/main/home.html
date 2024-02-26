@@ -1,70 +1,72 @@
 <!DOCTYPE html>
+
+{% extends "base.html" %} 
 {% load static %}
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="{% static 'style.css' %}" />
-        <title>Accueil</title>
-    </head>
+{% block content %}
 
-    <body>
-        <header>
-            <nav></nav>
-        </header>
 
-        <figure class="portrait">
-            <img
-                src="{% static 'images/portrait-young-woman-digital-nomad-standing-office-with-laptop-smiling-working-her_1258-195345.jpg' %}"
-                alt=""
-            />
-            <figcaption>
-                <p>Need funding for your small business?</p>
-                <a href="">Learn about SBA loans</a>
-            </figcaption>
-        </figure>
+<figure class="portrait">
+    <img
+        src="{% static 'images/portrait-young-woman-digital-nomad-standing-office-with-laptop-smiling-working-her_1258-195345.jpg' %}"
+        alt=""
+    />
+    <figcaption>
+        <p>Need funding for your small business?</p>
+        <a href="">Learn about SBA loans</a>
+    </figcaption>
+</figure>
 
-        <div class="grid-container">
-            <div class="case">
-                <h3>Make a payment to SBA</h3>
-                <p>
-                    Learn how to make a payment on your SBA loan or check your
-                    account balance and due date.
-                </p>
-                <a href="">Make a payment</a>
-            </div>
-            <div class="case">
-                <h3>Sign into your SBA account</h3>
-                <p>
-                    Check your account status, update your information, and get
-                    access to other portals.
-                </p>
-                <a href="">Access accounts</a>
-            </div>
-            <div class="case">
-                <h3>Upcoming events</h3>
-                <p>
-                    SBA and our partners host virtual and in-person educational
-                    trainings to help start and grow your business.
-                </p>
-                <a href="">Find upcoming events</a>
-            </div>
-        </div>
+<div class="grid-container">
+    <div class="case">
+        <h3>Make a payment to SBA</h3>
+        <p>
+            Learn how to make a payment on your SBA loan or check your account
+            balance and due date.
+        </p>
+        <a href="">Make a payment</a>
+    </div>
+    <div class="case">
+        <h3>Sign into your SBA account</h3>
+        <p>
+            Check your account status, update your information, and get access
+            to other portals.
+        </p>
+        <a href="">Access accounts</a>
+    </div>
+    <div class="case">
+        <h3>Upcoming events</h3>
+        <p>
+            SBA and our partners host virtual and in-person educational
+            trainings to help start and grow your business.
+        </p>
+        <a href="">Find upcoming events</a>
+    </div>
+</div>
 
-        <div class="bandeau">
-            <img src="{% static 'images/polaroid.jpg' %}" alt="" />
-            <figcaption>
-                <h1>SBA Celebrates Black History Month</h1>
-                <p>
-                    Resources, events, and information for Black business owners
-                </p>
-                <a href="">Access resources for black-owned businesses</a>
-            </figcaption>
-        </div>
+<div class="bandeau">
+    <img src="{% static 'images/polaroid.jpg' %}" alt="" />
+    <figcaption>
+        <h1>SBA Celebrates Black History Month</h1>
+        <p>Resources, events, and information for Black business owners</p>
+        <a href="">Access resources for black-owned businesses</a>
+    </figcaption>
+</div>
 
-        <h2>Browse business topics</h2>
-        <section class="business-grid">
-            
-        </section>
-    </body>
-</html>
+<h2>Browse business topics</h2>
+<section class="business-grid">
+    <div class="business">1</div>
+    <div class="business">2</div>
+    <div class="business">3</div>
+    <div class="business">4</div>
+</section>
+
+
+<h2>How we help small businesses</h2>
+<section class="business-help">
+    <div class="advices">1</div>
+    <div class="advices">2</div>
+    <div class="advices">3</div>
+    <div class="advices">4</div>
+</section>
+
+{% endblock content %}

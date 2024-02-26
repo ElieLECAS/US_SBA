@@ -8,10 +8,34 @@ body {
     max-width: 2000px;
     margin: auto;
 }
+header {
+    height: auto;
+    background-color: #162e51;  
+}
 
-nav {
-    background-color: #162e51;
-    height: 10vh;
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    transition: .2s;
+}
+
+header a:hover{
+    text-decoration: underline;
+    transition: .2s;
+}
+
+header nav div{
+    display: flex;
+    gap: 10px;
 }
 
 .portrait {
@@ -63,7 +87,7 @@ nav {
 .portrait figcaption a:hover {
     background-color: white;
     color: #162e51;
-    transition: 0.2s;
+    transition: 0.4s;
 }
 
 .grid-container {
@@ -145,4 +169,28 @@ nav {
 .bandeau figcaption a:hover {
     color: #162e51;
     background-color: white;
+}
+
+h2{
+    margin: 30px 60px;
+    
+}
+
+.business-grid, .business-help{
+    padding: 0px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+section .business, section .advices{
+        border: solid 1px #162e51;
+        border-radius: 5px;
+        padding: 20px 50px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        height: 250px;
 }

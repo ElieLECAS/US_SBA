@@ -1,5 +1,10 @@
 asgiref==3.7.2
 Django==4.1
+django-dotenv<2
+django-livereload-server<1
+django-widget-tweaks<2
+requests<3
+psycopg2-binary<3
 Jinja2==2.11.3
 MarkupSafe==2.1.5
 sqlparse==0.4.4

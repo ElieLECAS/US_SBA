@@ -1,9 +1,9 @@
 {% load static %}
 <header>
     <nav>
-        <a href="/"></a>
+        <a href="/">home</a>
         <div>
-            <a href="">API</a>
+            <a href="/api_page/">API</a>
             <a href="">Fonctionalités</a>
             <a href="">Spécial</a>
         </div>
@@ -11,18 +11,15 @@
         {% if user.is_authenticated %}
             <div>
                 <p>Logged as {{user.get_username}}</p>
-                <a href="">Logout</a>
+                <a href="{% url "logout" %}">Logout</a>
             </div>
         {% else %}
             <div>
-            <a href="">Sign up</a>
+            <a href="{% url "signup" %}">Sign up</a>
             <p>|</p>
-            <a href="">Login &#10132;</a>
+            <a href="{% url "login" %}">Login &#10132;</a>
             </div>
-        {% endif %}
-
- 
-       
+        {% endif %}      
     </nav>
 
     {% comment %} <div id='hamburger'>

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% block content %}
+{% load static %}
+
+
+<form class="login" method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+
+    <div>
+        <label for="user.get_username">Your username</label>
+        <tr>
+            <td placeholer="Your eMail">{{ form.username }}</td>
+        </tr>
+    </div>
+    <div>
+        <label for="password">Your password</label>
+        <tr>
+            <td placeholer="Your password">{{ form.password }}</td>
+        </tr>
+    </div>
+    <button type="submit" value="login">Log in</button>
+
+</form>
+
+{% endblock content %}

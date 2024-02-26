@@ -195,19 +195,94 @@ section .advices {
     text-align: center;
     height: 250px;
 }
-footer{
+
+
+/* Formulaire Login */
+
+form {
+    color: white;
+    border: solid 1px #162e51;
+    border-radius: 15px;
+    background-color: #162e51;
+    width: 50vh;
+    height: 30vh;
+    padding: 30px;
+    margin: 50px auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+}
+form div{
+    color: white;
+    width: 80%;
+    display: flex;
+    gap: 10px;
+    flex-flow: column nowrap;
+    margin-bottom: 20px;
+}
+form div tr td{
+    border-radius: 30px;
+    height: 30px;
+}
+
+form button{
+    font-weight: 700;
+    width: 30%;
+    height: 30px;
+    border-radius: 30px;
+}
+
+footer {
     padding-top: 30px;
 }
 footer .prefooter {
-    background-color: #dddddd;
+    background-color: #e6e6e6;
     padding: 30px 60px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
     gap: 20px;
 }
 
+footer .prefooter .about h3,footer .prefooter .signup h3{
+    padding-bottom: 10px;
+}
+
+footer .prefooter .about a {
+    text-decoration: underline;
+    color:#162e51;
+    transition: .2s;
+}
+
+footer .prefooter .about a:hover{
+    color: white;
+}
+
 footer .prefooter div {
-    border: solid 1px #162e51;
+    /* border: solid 1px #162e51;
+    border-radius: 5px; */
+    line-height: 30px;
     display: flex;
     flex-flow: column nowrap;
+}
+
+footer .contact {
+    background-color: #949494;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+}
+
+footer .contact .coordonnees{
+    line-height: 25px;
+}
+
+footer .contact .social-network{
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: center;
+    gap: 30px;
 }

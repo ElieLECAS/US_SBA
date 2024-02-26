@@ -10,7 +10,7 @@ body {
 }
 header {
     height: auto;
-    background-color: #162e51;  
+    background-color: #162e51;
 }
 
 header nav {
@@ -22,18 +22,18 @@ header nav {
     padding-bottom: 20px;
 }
 
-header a{
+header a {
     color: white;
     text-decoration: none;
-    transition: .2s;
+    transition: 0.2s;
 }
 
-header a:hover{
+header a:hover {
     text-decoration: underline;
-    transition: .2s;
+    transition: 0.2s;
 }
 
-header nav div{
+header nav div {
     display: flex;
     gap: 10px;
 }
@@ -171,26 +171,43 @@ header nav div{
     background-color: white;
 }
 
-h2{
+h2 {
     margin: 30px 60px;
-    
 }
 
-.business-grid, .business-help{
+.business-grid,
+.business-help {
     padding: 0px 60px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
 }
 
-section .business, section .advices{
-        border: solid 1px #162e51;
-        border-radius: 5px;
-        padding: 20px 50px;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-        height: 250px;
+section .business,
+section .advices {
+    border: solid 1px #162e51;
+    border-radius: 5px;
+    padding: 20px 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 250px;
+}
+footer{
+    padding-top: 30px;
+}
+footer .prefooter {
+    background-color: #dddddd;
+    padding: 30px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+    gap: 20px;
+}
+
+footer .prefooter div {
+    border: solid 1px #162e51;
+    display: flex;
+    flex-flow: column nowrap;
 }

@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from .forms import PredictApiForm
 from requests import Request, Session
-
+import json
 import os
 
 
@@ -15,9 +16,26 @@ def api_page(request):
 
     headers = {
     'Accepts': 'application/json',
-    'X-CMC_PRO_API_KEY': os.getenv("API_KEY"),
     }
 
     session = Session()
     session.headers.update(headers)
-    return render(request, "main/api_page.html")
+    
+
+    if request.method == "POST":
+        form = PredictApiForm(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data)
+            input_data = json.dumps(form.cleaned_data)
+            response = session.post(url, data=input_data)
+            
+            data = json.loads(response.text)
+            print(data)
+            form.save()
+            
+            
+            return render(request, "main/api_perso.html", context={"data" : data})
+
+    else:
+        form = PredictApiForm()
+    return render(request, "main/api_page.html", context={"form": form})

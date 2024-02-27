@@ -68,9 +68,8 @@ def prediction_root(feature_input:FeaturesInput):
 
     pred = prediction(model,[[F1,F2,F3,F4,F5,F6,F7]])
     
-    prediction_value = pred[0]
 
-    return PredictionOut(category=prediction_value)
+    return PredictionOut(category=pred)
 
 # @app.post("/predict")
 # async def predict(payload: FeaturesInput):

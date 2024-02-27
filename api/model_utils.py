@@ -9,5 +9,5 @@ def load_model(path='model.pkl'):
 def prediction(model, data):
     df = pd.DataFrame(data, columns=['State', 'Zip', 'BankState', 'ApprovalFY', 'Term', 'GrAppv', 'SBA_Appv'])
     predictions = model.predict(df)
-    return predictions
+    return predictions[0]
 

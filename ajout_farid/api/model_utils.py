@@ -1,10 +1,13 @@
 
-import pickle
+from joblib import load
+import pandas as pd
 
-with open('modele.pkl', 'rb') as fichier:
-    modele_charge = pickle.load(fichier)
+def load_model(path='model.pkl'):
+    model = load(path)
+    return model
 
-def prediction(modele_charge, data):
-    predictions = modele_charge.predict(data)
+def prediction(model, data):
+    df = pd.DataFrame(data, columns=['State', 'Zip', 'BankState', 'ApprovalFY', 'Term', 'GrAppv', 'SBA_Appv'])
+    predictions = model.predict(df)
     return predictions
 

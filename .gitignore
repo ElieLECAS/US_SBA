@@ -5,6 +5,10 @@ loan_project/
 SBAnational
 MLProject
 *.csv
+venvapp
+.venvapp
+venvapi
+.venvapi
 
 ### Linux ###
 *~

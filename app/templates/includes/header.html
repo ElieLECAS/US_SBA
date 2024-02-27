@@ -1,0 +1,40 @@
+{% load static %}
+<header>
+    <nav>
+        <a href="/">home</a>
+        <div>
+            <a href="/api_page/">Predictions</a>
+            <a href="">Fonctionalités</a>
+            <a href="">Spécial</a>
+        </div>
+
+        {% if user.is_authenticated %}
+            <div>
+                <p>Logged as {{user.get_username}}</p>
+                <a href="{% url "logout" %}">Logout</a>
+            </div>
+        {% else %}
+            <div>
+            <a href="{% url "signup" %}">Sign up</a>
+            <p>|</p>
+            <a href="{% url "login" %}">Login &#10132;</a>
+            </div>
+        {% endif %}      
+    </nav>
+
+    {% comment %} <div id='hamburger'>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <nav id='menu'>
+        <a href="">Lien 1</a>
+        <a href="">Lien 2</a>
+        <a href="">Lien 3</a>
+        <a href="">Login &#10132;</a>
+    </nav> {% endcomment %}
+
+</header>

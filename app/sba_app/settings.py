@@ -95,7 +95,7 @@ POSTGRES_AVAIL = all(
     ]
 )
 
-POSTGRES_RDY = int(os.getenv('POSTGRES_RDY'))
+# POSTGRES_RDY = int(os.getenv('POSTGRES_RDY'))
 
 if POSTGRES_AVAIL and POSTGRES_RDY :
 
@@ -150,7 +150,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [
-    # os.path.join(BASE_DIR, 'static')
+    # os.path.join(BASE_DIR, 'static'),
     BASE_DIR / "static"
 ]
 

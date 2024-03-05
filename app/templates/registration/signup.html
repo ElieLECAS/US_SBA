@@ -3,10 +3,35 @@
 
 {% block content %}
 
-    <form method="POST">
+<form class="login" method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <div>
+        <label for="user.get_username">Your username</label>
+        <tr>
+            <td placeholer="Your username">{{ form.username }}</td>
+        </tr>
+    </div>
+    <div>
+        <label for="password">Your password</label>
+        <tr>
+            <td placeholer="Your password">{{ form.password1 }}</td>
+        </tr>
+    </div>
+    <div>
+        <label for="password">Confirm your password</label>
+        <tr>
+            <td placeholer="Your password">{{ form.password2 }}</td>
+        </tr>
+    </div>
+
+    <button type="submit" value="login">Sign in</button>
+</form>
+
+
+    {% comment %} <form method="POST">
         {% csrf_token %}
         {{form}}
         <button>Sign up</button>
-    </form>
+    </form> {% endcomment %}
 
 {% endblock content %}

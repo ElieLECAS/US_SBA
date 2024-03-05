@@ -22,6 +22,10 @@ header nav {
     padding-bottom: 20px;
 }
 
+header img {
+    display: none;
+}
+
 header a {
     color: white;
     text-decoration: none;
@@ -287,8 +291,41 @@ footer .contact .social-network {
 }
 
 @media screen and (max-width: 1000px) {
+    body {
+        overflow-x: hidden;
+    }
+    body::-webkit-scrollbar {
+        width: 0;
+    }
     header {
+        /* display: none; */
+        /* min-height: 70px; */
+    }
+
+    #hamburger {
+        display: block;
+        color: white;
+    }
+
+    header nav {
         display: none;
+        flex-flow: column;
+        gap: 50px;
+        transition: .2s;
+    }
+
+    header nav.hidden {
+        display: block;
+    }
+
+    header nav div {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .portrait img {
+        width: 100vw;
+        height: auto;
     }
     .portrait figcaption {
         position: relative;

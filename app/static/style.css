@@ -207,7 +207,7 @@ form {
     border-radius: 15px;
     background-color: #162e51;
     width: 50vh;
-    height: 30vh;
+    /* height: 30vh; */
     padding: 30px;
     margin: 50px auto;
     display: flex;
@@ -216,8 +216,12 @@ form {
     justify-items: center;
     align-items: center;
 }
+
+form .predict {
+    height: 500px;
+}
 form div {
-    color: white;
+    color: red;
     width: 80%;
     display: flex;
     gap: 10px;

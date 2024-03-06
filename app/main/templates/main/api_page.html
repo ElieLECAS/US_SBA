@@ -5,14 +5,76 @@
 
 <h1>Obtenir des informations sur les remboursements</h1>
 
-<form action="." method="post">
+{% comment %} <form class="login" action="." method="post">
     {% csrf_token %}
-    {{form}}
+    <p>State</p>
+    {{form.State}}
+    <p>Zip Code</p>
+    {{form.Zip}}
+    <p>BankState</p>
+    {{form.BankState}}
+    <p>ApprovalFY</p>
+    {{form.ApprovalFY}}
+    <p>Term</p>
+    {{form.Term}}
+    <p>GrAppv</p>
+    {{form.GrAppv}}
+    <p>SBA_Appv</p>
+    {{form.SBA_Appv}}
     
     <input type='submit'></button>
 
+</form> {% endcomment %}
+ 
+
+ <form class="login predict" method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <div>
+        <label for="user.get_username">State</label>
+        <tr>
+            <td placeholer="Your username">{{ form.State }}</td>
+        </tr>
+    </div>
+    <div>
+        <label for="password">Zip Code</label>
+        <tr>
+            <td placeholer="Your password">{{ form.Zip }}</td>
+        </tr>
+    </div>
+    <div>
+        <label for="password">BankState</label>
+        <tr>
+            <td placeholer="Your password">{{ form.BankState }}</td>
+        </tr>
+    </div>
+    <div>
+        <label for="password">ApprovalFY</label>
+        <tr>
+            <td placeholer="Your password">{{ form.ApprovalFY }}</td>
+        </tr>
+    </div>
+    <div>
+        <label for="password">Term</label>
+        <tr>
+            <td placeholer="Your password">{{ form.Term }}</td>
+        </tr>
+    </div>
+    <div>
+        <label for="password">GrAppv</label>
+        <tr>
+            <td placeholer="Your password">{{ form.GrAppv }}</td>
+        </tr>
+    </div>
+    <div>
+        <label for="password">SBA_Appv</label>
+        <tr>
+            <td placeholer="Your password">{{ form.SBA_Appv }}</td>
+        </tr>
+    </div>
+
+    <button type="submit" value="login">Predict</button>
 </form>
- <br><br>
+<br><br>
 
  {{data}}
 

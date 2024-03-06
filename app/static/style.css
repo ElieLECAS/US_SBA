@@ -42,6 +42,10 @@ header nav div {
     gap: 10px;
 }
 
+header nav div p{
+    color: white;
+}
+
 .portrait {
     position: relative;
 }
@@ -207,7 +211,7 @@ form {
     border-radius: 15px;
     background-color: #162e51;
     width: 50vh;
-    /* height: 30vh; */
+    height: auto;
     padding: 30px;
     margin: 50px auto;
     display: flex;
@@ -217,17 +221,25 @@ form {
     align-items: center;
 }
 
-form .predict {
-    height: 500px;
-}
-form div {
-    color: red;
+form div{
+    color: white;
     width: 80%;
     display: flex;
     gap: 10px;
     flex-flow: column nowrap;
     margin-bottom: 20px;
 }
+
+form button {
+    color:#162e51;
+    transition: .2s;
+}
+
+form button:hover{
+    color: white;
+    background-color: #162e51;
+}
+
 form div tr td {
     border-radius: 30px;
     height: 30px;
@@ -301,10 +313,6 @@ footer .contact .social-network {
     body::-webkit-scrollbar {
         width: 0;
     }
-    header {
-        /* display: none; */
-        /* min-height: 70px; */
-    }
 
     #hamburger {
         display: block;
@@ -315,7 +323,7 @@ footer .contact .social-network {
         display: none;
         flex-flow: column;
         gap: 50px;
-        transition: .2s;
+        transition: 0.2s;
     }
 
     header nav.hidden {

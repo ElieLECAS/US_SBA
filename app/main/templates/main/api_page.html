@@ -1,88 +1,61 @@
-{% extends "base.html" %}
-
-{% load static widget_tweaks %}
-{% block content %}
+{% extends "base.html" %} {% load static widget_tweaks %} {% block content %}
 
 <h1>Obtenir des informations sur les remboursements</h1>
 
-{% comment %} <form class="login" action="." method="post">
-    {% csrf_token %}
-    <p>State</p>
-    {{form.State}}
-    <p>Zip Code</p>
-    {{form.Zip}}
-    <p>BankState</p>
-    {{form.BankState}}
-    <p>ApprovalFY</p>
-    {{form.ApprovalFY}}
-    <p>Term</p>
-    {{form.Term}}
-    <p>GrAppv</p>
-    {{form.GrAppv}}
-    <p>SBA_Appv</p>
-    {{form.SBA_Appv}}
-    
-    <input type='submit'></button>
+<form class="login" action="." method="post">
+    {% csrf_token %} {% if data.category == "GOOD"%}
+    <p>Le prêt peut être accordé</p>
 
-</form> {% endcomment %}
- 
-
- <form class="login predict" method="post" action="{% url 'login' %}">
-    {% csrf_token %}
+    {% elif data.category == "BAD" %}
+    <p>Le prêt ne peut pas être accordé</p>
+    {% else %}
     <div>
-        <label for="user.get_username">State</label>
+        <label for="user.get_username">Your State</label>
         <tr>
-            <td placeholer="Your username">{{ form.State }}</td>
+            <td>{{form.State}}</td>
         </tr>
     </div>
     <div>
-        <label for="password">Zip Code</label>
+        <label for="user.get_username">Your ZipCode</label>
         <tr>
-            <td placeholer="Your password">{{ form.Zip }}</td>
+            <td>{{form.Zip}}</td>
         </tr>
     </div>
     <div>
-        <label for="password">BankState</label>
+        <label for="user.get_username">Your Bank State</label>
         <tr>
-            <td placeholer="Your password">{{ form.BankState }}</td>
+            <td>{{form.BankState}}</td>
         </tr>
     </div>
     <div>
-        <label for="password">ApprovalFY</label>
+        <label for="user.get_username">Approval Year</label>
         <tr>
-            <td placeholer="Your password">{{ form.ApprovalFY }}</td>
+            <td>{{form.ApprovalFY}}</td>
         </tr>
     </div>
     <div>
-        <label for="password">Term</label>
+        <label for="user.get_username">Term</label>
         <tr>
-            <td placeholer="Your password">{{ form.Term }}</td>
+            <td>{{form.Term}}</td>
         </tr>
     </div>
     <div>
-        <label for="password">GrAppv</label>
+        <label for="user.get_username">GrAppv</label>
         <tr>
-            <td placeholer="Your password">{{ form.GrAppv }}</td>
+            <td>{{form.GrAppv}}</td>
         </tr>
     </div>
     <div>
-        <label for="password">SBA_Appv</label>
+        <label for="user.get_username">SBA_Appv</label>
         <tr>
-            <td placeholer="Your password">{{ form.SBA_Appv }}</td>
+            <td>{{form.SBA_Appv}}</td>
         </tr>
     </div>
-
-    <button type="submit" value="login">Predict</button>
+    <br />
+    <button type="submit">Predict</button>
+    {% endif %}
 </form>
-<br><br>
 
- {{data}}
-
-{% comment %} {% if data %}
-
- <p>Prédiction : </p>
-
-{% endif %} {% endcomment %}
-
+<br /><br />
 
 {% endblock content %}

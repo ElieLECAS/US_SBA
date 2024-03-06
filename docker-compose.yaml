@@ -41,7 +41,9 @@ services:
       - app/.env
     build: 
       context: ./app/
-      dockerfile: Dockerfile      
+      dockerfile: Dockerfile  
+    volumes:
+      - ./app/main:/app/main
   postgres_db:
     image: postgres 
     restart: always

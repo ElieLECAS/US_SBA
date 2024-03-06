@@ -7,6 +7,7 @@
 body {
     max-width: 2000px;
     margin: auto;
+    overflow: hidden;
 }
 header {
     height: auto;

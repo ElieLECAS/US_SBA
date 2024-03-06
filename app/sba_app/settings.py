@@ -95,7 +95,7 @@ POSTGRES_AVAIL = all(
     ]
 )
 
-# POSTGRES_RDY = int(os.getenv('POSTGRES_RDY'))
+POSTGRES_RDY = int(os.getenv('POSTGRES_RDY'))
 
 if POSTGRES_AVAIL and POSTGRES_RDY :
 

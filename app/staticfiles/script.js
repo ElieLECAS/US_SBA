@@ -33,7 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
     
     function enableDarkMode() {
         darkMode.style.display = "block";
-        lightMode.style.display = "none";
+        // lightMode.style.display = "none";
+        lightMode.style.left = "50%";
+        darkMode.style.right = "0%";
+
         document.documentElement.style.setProperty('--bg-color', '#1f1f1f');
         document.documentElement.style.setProperty('--text', 'white');
         localStorage.setItem('theme', 'dark');
@@ -41,7 +44,9 @@ document.addEventListener("DOMContentLoaded", function() {
     
     function enableLightMode() {
         lightMode.style.display = "block";
-        darkMode.style.display = "none";
+        // darkMode.style.display = "none";
+        lightMode.style.left = "0%";
+        darkMode.style.right = "50%";
         document.documentElement.style.setProperty('--bg-color', 'white');
         document.documentElement.style.setProperty('--text', 'black');
         localStorage.setItem('theme', 'light');

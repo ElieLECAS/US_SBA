@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const lightMode = document.getElementById("LightMode");
     const darkMode = document.getElementById("DarkMode");
     
-    // Fonction pour activer le mode sombre
     function enableDarkMode() {
         darkMode.style.display = "block";
         lightMode.style.display = "none";
@@ -40,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem('theme', 'dark');
     }
     
-    // Fonction pour activer le mode clair
     function enableLightMode() {
         lightMode.style.display = "block";
         darkMode.style.display = "none";
@@ -49,12 +47,11 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem('theme', 'light');
     }
     
-    // Vérifie si le mode sombre est déjà activé
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme === 'dark') {
         enableDarkMode();
     } else {
-        enableLightMode(); // Par défaut, activer le mode clair
+        enableLightMode();
     }
     
     lightMode.addEventListener("click", function() {

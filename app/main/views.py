@@ -13,13 +13,13 @@ def home_page(request):
 @login_required
 def api_page(request):
     # Docker Compose
-    url = "http://api:8000/predict"
+    # url = "http://api:8000/predict"
 
     # Docker
     # url = "http://172.17.0.2:8000/predict"
 
     # Local
-    # url = "http://127.0.0.1:8000/predict"
+    url = "http://127.0.0.1:8000/predict"
 
     headers = {
     'Accepts': 'application/json',

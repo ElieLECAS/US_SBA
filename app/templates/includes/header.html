@@ -21,7 +21,11 @@
             <p>|</p>
             <a href="{% url "login" %}">Login &#10132;</a>
             </div>
-        {% endif %}      
+        {% endif %}
+        <div>
+            <img id="LightMode" class="theme light" src="{% static "images/light-mode.png" %}" alt="">  
+            <img id="DarkMode" class="theme dark" src="{% static "images/dark-mode.png" %}" alt="">
+        </div>
     </nav>
 
 </header>

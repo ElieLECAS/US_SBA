@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
     lightMode.addEventListener("click", function() {
         lightMode.style.display = "none";
         darkMode.style.display = "block";
-
         document.documentElement.style.setProperty('--bg-color', '#1f1f1f');
         document.documentElement.style.setProperty('--text', 'white');
     });

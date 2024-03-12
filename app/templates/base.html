@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 {% load static %}
+{% comment %} {% load static tailwind_tags %} {% endcomment %}
 
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {% comment %} {% tailwind_css %} {% endcomment %}
         <link rel="stylesheet" href="{% static 'style.css' %}">
         {% comment %} <link rel="stylesheet" href="{% static 'css/output.css' %}"> {% endcomment %}
         <title>Accueil</title>

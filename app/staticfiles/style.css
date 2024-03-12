@@ -54,18 +54,16 @@ header img.theme {
     cursor: pointer;
     border: 1px solid var(--marin);
     transition: 0.5s;
+    opacity: 0;
+
 }
 
 #LightMode {
-    display: block;
     background-color: rgb(218, 235, 255);
-    left: 0%;
 }
 
 #DarkMode {
-    display: none;
     background-color: rgb(1, 53, 150);
-    right: 0%;
 }
 
 header a {

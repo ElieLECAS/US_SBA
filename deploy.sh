@@ -7,4 +7,3 @@ docker build -t elielecas/us_sba-api ./api/
 docker push elielecas/us_sba-api
 
 az container create --resource-group RG_LECASE --file deploy.yaml
-

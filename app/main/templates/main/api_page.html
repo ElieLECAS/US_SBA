@@ -2,8 +2,12 @@
 
 <h1>Obtenir des informations sur les remboursements</h1>
 
+
+
+
 <form class="login" action="." method="post">
-    {% csrf_token %} {% if data.category == "GOOD"%}
+    {% csrf_token %} 
+    {% if data.category == "GOOD"%}
     <p>Le prêt peut être accordé</p>
 
     {% elif data.category == "BAD" %}

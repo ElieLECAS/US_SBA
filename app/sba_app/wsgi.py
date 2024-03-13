@@ -13,7 +13,6 @@ import dotenv
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sba_app.settings")
 
 CURRENT_DIR = pathlib.Path(__file__).resolve().parent
 BASE_DIR = CURRENT_DIR.parent
@@ -24,8 +23,8 @@ dotenv.read_dotenv(str(ENV_FILE_PATH), override=True)
 DEBUG = os.environ.get('DEBUG') == '1'
 
 if DEBUG :
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", 'coinplon.settings.dev')
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", 'sba_app.settings.dev')
 else :
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", 'coinplon.settings.prod')
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", 'sba_app.settings.prod')
 
 application = get_wsgi_application()

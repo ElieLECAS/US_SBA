@@ -41,7 +41,10 @@ INSTALLED_APPS = [
     "livereload",
     "django.contrib.staticfiles",
     "main",
-    "widget_tweaks"
+    "widget_tweaks",
+    "tailwind",
+    "theme",
+    "django_browser_reload",
 ]
 
 MIDDLEWARE = [
@@ -53,7 +56,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    'livereload.middleware.LiveReloadScript'
+    'livereload.middleware.LiveReloadScript',
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = "sba_app.urls"
@@ -76,6 +80,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "sba_app.wsgi.application"
 
+
+# TailWind
+TAILWIND_APP_NAME = 'theme'
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases

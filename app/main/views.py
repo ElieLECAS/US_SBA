@@ -19,7 +19,9 @@ def api_page(request):
     # url = "http://172.17.0.2:8000/predict"
 
     # Local
-    url = "http://127.0.0.1:8000/predict"
+    # url = "http://127.0.0.1:8000/predict"
+    
+    url = os.getenv('URL_API')
 
     headers = {
     'Accepts': 'application/json',

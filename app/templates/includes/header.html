@@ -13,7 +13,7 @@
         {% if user.is_authenticated %}
             <div>
                 <p>Logged as {{user.get_username}}</p>
-                <a href="{% url "logout" %}">Logout</a>
+                <a href="{% url "logout" %}?next=/..">Logout</a>
             </div>
         {% else %}
             <div>

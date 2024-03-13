@@ -1,9 +1,8 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %} {% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %} 
 
-
-{% block content %}
-
-<form class="login" method="post" action="{% url 'login' %}">
+<form class="login" method="post" action="">
     {% csrf_token %}
     <div>
         <label for="user.get_username">Your username</label>
@@ -24,14 +23,12 @@
         </tr>
     </div>
 
-    <button type="submit" value="login">Sign in</button>
+    <button type="submit" value="Register">Sign in</button>
 </form>
 
-
-    {% comment %} <form method="POST">
-        {% csrf_token %}
-        {{form}}
-        <button>Sign up</button>
-    </form> {% endcomment %}
+{% comment %} <form method="POST">
+    {% csrf_token %} {{form}}
+    <button>Sign up</button>
+</form> {% endcomment %}
 
 {% endblock content %}

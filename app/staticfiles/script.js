@@ -32,21 +32,32 @@ document.addEventListener("DOMContentLoaded", function() {
     const darkMode = document.getElementById("DarkMode");
     
     function enableDarkMode() {
-        darkMode.style.display = "block";
-        // lightMode.style.display = "none";
         lightMode.style.left = "50%";
+        lightMode.style.right = "0%";
+        darkMode.style.left = "50%";
         darkMode.style.right = "0%";
-
+        darkMode.style.opacity = "100%";
+        lightMode.style.opacity = "0%";
+        darkMode.style.zIndex = "1";
+        lightMode.style.zIndex = "-1";
+        darkMode.style.rotate = "360deg";
+        lightMode.style.rotate = "360deg";
         document.documentElement.style.setProperty('--bg-color', '#1f1f1f');
         document.documentElement.style.setProperty('--text', 'white');
         localStorage.setItem('theme', 'dark');
     }
     
     function enableLightMode() {
-        lightMode.style.display = "block";
-        // darkMode.style.display = "none";
         lightMode.style.left = "0%";
+        lightMode.style.right = "50%";
+        darkMode.style.left = "0%";
         darkMode.style.right = "50%";
+        darkMode.style.opacity = "0%"
+        lightMode.style.opacity = "100%"
+        darkMode.style.zIndex = "-1";
+        lightMode.style.zIndex = "1";
+        darkMode.style.rotate = "360deg";
+        lightMode.style.rotate = "360deg";
         document.documentElement.style.setProperty('--bg-color', 'white');
         document.documentElement.style.setProperty('--text', 'black');
         localStorage.setItem('theme', 'light');

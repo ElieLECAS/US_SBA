@@ -36,14 +36,14 @@ services:
     depends_on:
       - postgres_db
     ports:
-      - 8001:8001
+      - 80:80
     env_file:
       - app/.env
     build: 
       context: ./app/
       dockerfile: Dockerfile  
     volumes:
-      - ./app/main:/app/main
+      - ./app/:/app/
   postgres_db:
     image: postgres 
     restart: always

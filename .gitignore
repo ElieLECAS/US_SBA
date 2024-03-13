@@ -10,6 +10,7 @@ venvapp
 .venvapp
 venvapi
 .venvapi
+.venvEDA
 deploy.yaml
 
 ### Linux ###

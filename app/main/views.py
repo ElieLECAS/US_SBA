@@ -10,6 +10,9 @@ import os
 def home_page(request):
     return render(request, 'main/home.html')
 
+def error_404(request, exception):
+    return render(request, 'main/404.html', status=404)
+
 @login_required
 def api_page(request):
     # Docker Compose

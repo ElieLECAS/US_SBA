@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from model_utils import prediction, load_model
-import pandas as pd
 
 app = FastAPI()
 
